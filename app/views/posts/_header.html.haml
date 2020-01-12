@@ -1,1 +1,26 @@
-カカロットー
+.mainbox
+  .mainbox__top
+    .mainbox__top__left
+      = link_to image_tag("mori.png",size:"100x50"), root_path
+    .mainbox__top__centar
+      %form.mainbox__top__center__serch
+        %input.mainbox__top__center__serch__form{placeholder: "キーワード入力", type: "text"}/
+        %button.mainbox__top__center__serch__button{type:"submit"}
+          %i.fas.fa-search
+
+    .mainbox__top__right
+      %ul.mainbox__top__right__nav
+        %li.mainbox__top__right__nav__post
+          = link_to '投稿する', "/"
+        %li.mainbox__top__right__nav__mypage
+          = link_to 'マイページ', "/"
+        %li.mainbox__top__right__nav__post
+          = link_to 'ログアウト', "/"
+        %li.mainbox__top__right__nav__post
+          = link_to '新規登録', "/"
+        %li.mainbox__top__right__nav__post
+          = link_to 'ログイン', "/"
+
+
+
+

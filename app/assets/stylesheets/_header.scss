@@ -1,0 +1,37 @@
+.mainbox{ 
+  height:150px;
+  width: 100%;
+  background-color: seagreen;
+  &__top{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 50px;
+    &__left{
+    }
+    &__center{
+      text-align: center;
+      background-color: springgreen;
+      &__serch{
+        &__form{
+          height: 38px;
+          width: 300px;
+          
+        }
+        &__button{
+          font-size: 20px;
+          color: rgb(243, 237, 237);
+          background-color: seagreen;
+        }
+      }
+    }
+    &__right{
+     &__nav{
+      display: flex;
+      list-style: none;
+      li{
+        padding-left: 10px;
+      }
+     }
+    }
+  }
+}

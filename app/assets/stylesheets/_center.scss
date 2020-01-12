@@ -1,0 +1,13 @@
+.center{
+  width: 684px;
+  height: 700px;
+  background-color:blue;
+  &__content{
+  background-color: white;
+
+    &__header{
+    text-align: center;
+    }
+  }
+
+}
