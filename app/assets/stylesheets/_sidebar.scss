@@ -1,0 +1,18 @@
+.sidebar{
+  background-color:rgb(246, 246, 244);
+  height: 700px;
+  width: 300px;
+  float: left;
+  padding: 16px;
+  &__top{
+    h1{
+      text-align: center;
+    }
+    &__nav{
+      li{
+        padding-top: 50px;
+      
+      }
+    }
+  }
+}
