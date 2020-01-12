@@ -1,0 +1,18 @@
+.wapper
+  = render partial: 'posts/header'
+.show
+  .show__content
+    .show__content__in
+      .show__content__in__top
+        .show__content__in__top__name
+          田中
+        .show__content__in__top__date
+          = @post.created_at
+      .show__content__in__title
+        = @post.title
+      .show__content__in__center
+        .show__content__in__center
+          タグ
+      .show__content__in__main
+        .show__content__in__main__text
+          = simple_format @post.content 
