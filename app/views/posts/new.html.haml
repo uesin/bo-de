@@ -1,0 +1,16 @@
+.wapper
+  = render partial: 'posts/header'
+=form_with model:@post,local: true do |f|
+  .post
+    .post__content
+      .post__content__header
+        新規投稿
+      .post__content__title
+        = f.text_field :title,placeholder: "タイトル入力",class:"post__content__title__box"
+      .post__content__tag
+        = f.text_field :text,placeholder: "タグを付けてみよう",class:"post__content__tag__box"
+      .post__content__text
+        = f.text_area :content,placeholder: "本文",class:"post__content__text__box"
+      .post__content__button
+        = f.submit "投稿する",class:"post__content__button__btn"
+      
