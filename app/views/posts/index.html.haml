@@ -11,7 +11,7 @@
           .main__content__box__left__icon
           .main__content__box__right
             .main__content__box__right__top
-              = post.title   
+              = link_to post.title,post_path(post.id)   
             .main__content__box__right__bottom
               .main__content__box__right__bottom__user
                     
