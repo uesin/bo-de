@@ -40,15 +40,23 @@
           font-size: 15px;
           color: #999;
           display: flex;
+          margin-left: 20px;
           &__username{
             text-decoration: none;
             color: #999;  
           }
           &__date{
-            margin-left: 20px;
+            margin-left: 200px;
           }
           &__tag{
             margin-left: 20px;
+          }
+          &__edit{
+            margin-left: 100px;
+
+          }
+          &__delete{
+            margin-left: 30px;
           }
         }
       }
