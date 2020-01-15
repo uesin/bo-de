@@ -1,0 +1,23 @@
+.new
+  .new__content
+    .new__content__header
+      .new__content__header__top
+        ボドゲの森へようこそ
+      .new__content__header__bottom
+        新規登録(無料)して利用を開始しましょう。
+    .new__content__center
+      .new__content__center__left
+        .new__content__center__left__facebook
+          facebookで登録
+        .new__content__center__left__google
+          Googleで登録
+      .new__content__center__right
+        = form_with model: @user, url: user_registration_path, id: 'new_user', class: 'new_user', local: true do |f|
+          .new__content__center__right__nickname
+            = f.text_field :nickname,placeholder: "ニックネーム",class:"new__content__center__right__nickname__box"
+          .new__content__center__right__email
+            = f.email_field :email,placeholder: "メールアドレス",class:"new__content__center__right__email__box"
+          .new__content__center__right__password
+            = f.password_field :password,placeholder: "パスワード",class:"new__content__center__right__password__box",autocomplete: "off"
+          .new__content__center__right__submit
+            = f.submit "登録する",class:"new__content__center__right__submit__box"
