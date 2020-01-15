@@ -10,16 +10,18 @@
 
     .mainbox__top__right
       %ul.mainbox__top__right__nav
-        %li.mainbox__top__right__nav__post
-          = link_to '投稿する', "posts/new"
-        %li.mainbox__top__right__nav__mypage
-          = link_to 'マイページ', "/"
-        %li.mainbox__top__right__nav__post
-          = link_to 'ログアウト', "/"
-        %li.mainbox__top__right__nav__post
-          = link_to '新規登録', "/"
-        %li.mainbox__top__right__nav__post
-          = link_to 'ログイン', "/"
+        - if user_signed_in?
+          %li.mainbox__top__right__nav__post
+            = link_to '投稿する', "posts/new"
+          %li.mainbox__top__right__nav__mypage
+            = link_to 'マイページ', "/"
+          %li.mainbox__top__right__nav__post
+            = link_to "ログアウト",destroy_user_session_path, method: :delete 
+        - else 
+          %li.mainbox__top__right__nav__post
+            = link_to '新規登録', new_user_registration_path
+          %li.mainbox__top__right__nav__post
+            = link_to 'ログイン',new_user_session_path
 
 
 
