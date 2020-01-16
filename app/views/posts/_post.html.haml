@@ -1,0 +1,18 @@
+.content
+  - @posts.each do |post|
+    .content__box
+      .content__box__left__icon
+      .content__box__right
+        .content__box__right__top
+          = link_to post.title,post_path(post.id)   
+        .content__box__right__bottom
+          .content__box__right__bottom__user
+            = post.user.nickname
+          .content__box__right__bottom__tag
+            トランプ    
+          .content__box__right__bottom__date
+            = post.created_at
+          .content__box__right__bottom__edit  
+            = link_to '編集',edit_post_path(post.id)
+          .content__box__right__bottom__delete
+            = link_to '削除',post_path(post.id),method: :delete
