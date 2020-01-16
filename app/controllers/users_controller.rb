@@ -1,11 +1,13 @@
 class UsersController < ApplicationController
   def show
-    @user = User.find(params[:id])
-    @posts = current_user.posts
+    user = User.find(params[:id])
+    @nickname = user.nickname
+    @introduce = user.introduce
+    @posts = user.posts
   end
   def edit
-    @posts = current_user.posts
     @user = User.find(params[:id])
+    @posts = @user.posts
   end
   def update
     user = User.find(params[:id])

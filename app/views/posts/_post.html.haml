@@ -12,7 +12,9 @@
             トランプ    
           .content__box__right__bottom__date
             = post.created_at
-          .content__box__right__bottom__edit  
-            = link_to '編集',edit_post_path(post.id)
-          .content__box__right__bottom__delete
-            = link_to '削除',post_path(post.id),method: :delete
+        .content__box__right__bottom__user
+          - if user_signed_in? && current_user.id == post.user_id
+            .content__box__right__bottom__user__edit  
+              = link_to '編集',edit_post_path(post.id)
+            .content__box__right__bottom__user__delete
+              = link_to '削除',post_path(post.id),method: :delete
