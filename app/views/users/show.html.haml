@@ -6,13 +6,17 @@
       .mypage__main__top__icon
         .mypage__main__top__icon__box
       .mypage__main__top__nickname
-        ニックネーム
+        = @user.nickname
     .mypage__main__center
       .mypage__main__center__introduce
-        %input.mypage__main__center__introduce__box{placeholder: "説明文", type: "text"}
+        .mypage__main__center__introduce__box
+          = @user.introduce
+           
     .mypage__main__under
       .mypage__main__under__head
         投稿一覧
+      .mypage__main__under__posts
+    = render partial: 'posts/post'    
       
 
       

@@ -1,0 +1,20 @@
+=form_with model:@user,local: true do |f|
+  .mypage
+    .mypage__header
+      プロフィール編集
+    .mypage__main
+      .mypage__main__top
+        .mypage__main__top__icon
+          .mypage__main__top__icon__box
+        .mypage__main__top__nickname
+          = f.text_field :nickname,placeholder: "ニックネームを入力",class:"mypage__main__top__nickname__box"
+      .mypage__main__center
+        .mypage__main__center__introduce
+          = f.text_area :introduce,placeholder: "自己紹介",class:"mypage__main__center__introduce__box"
+      .mypage__main__under
+        .mypage__main__under__head
+          投稿一覧
+        .mypage__main__under__posts
+      = render partial: 'posts/post'
+    .mypage__button
+      = f.submit "変更する",class:"mypage__button__edit"

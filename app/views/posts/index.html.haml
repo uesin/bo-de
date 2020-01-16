@@ -5,30 +5,4 @@
   .main
     .main__header
       投稿一覧
-    .main__content
-      - @posts.each do |post|
-        .main__content__box
-          .main__content__box__left__icon
-          .main__content__box__right
-            .main__content__box__right__top
-              = link_to post.title,post_path(post.id)   
-            .main__content__box__right__bottom
-              .main__content__box__right__bottom__user
-                まりりん
-              .main__content__box__right__bottom__tag
-                トランプ    
-              .main__content__box__right__bottom__date
-                = post.created_at
-              .main__content__box__right__bottom__edit  
-                = link_to '編集',edit_post_path(post.id)
-              .main__content__box__right__bottom__delete
-                = link_to '削除',post_path(post.id),method: :delete
-              
-
-                  
-                
-
-
-        
-
-
+    = render partial: 'posts/post'
