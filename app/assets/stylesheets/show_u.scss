@@ -43,10 +43,13 @@
         border-width: 2px;
         border-style: solid;
         height: 80px;
-        width: 80px;
+        width: 200px;
         background-color: crimson;
-
+        &__choice{
+          margin-top: 20px;
+        }
        }
+       
 
       }
       &__nickname{

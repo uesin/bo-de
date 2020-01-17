@@ -5,7 +5,7 @@
     .show__content__in
       .show__content__in__top
         .show__content__in__top__name
-          田中
+          後藤
         .show__content__in__top__date
           = @post.created_at
       .show__content__in__title
@@ -15,4 +15,38 @@
           タグ
       .show__content__in__main
         .show__content__in__main__text
-          = simple_format @post.content 
+          = simple_format @post.content
+    - if current_user
+      .show__content__comment
+        = form_with(model:[@post, @comment], local: true) do |form|
+          .show__content__comment__box
+            = form.text_area :text, placeholder: "コメントする", rows: "2",class:"show__content__comment__box__text"
+            = form.submit "送信",class:"show__content__comment__box__submit"
+    - else
+      %strong
+        %p ※※※ コメントの投稿には新規登録/ログインが必要です ※※※
+    .show__content__display
+      .show__content__display__header
+        コメント一覧
+      -if @comments
+        .show__content__display__all
+          - @comments.each do |comment|
+            .show__content__display__all__box
+              .show__content__display__all__box__left
+                = comment.user.nickname 
+              .show__content__display__all__box__right
+                = comment.text
+            
+
+    
+
+      
+
+        
+        
+    
+    
+
+
+
+  

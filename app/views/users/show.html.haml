@@ -1,7 +1,6 @@
 .mypage
   .mypage__header
     プロフィール
-  - if user_signed_in?
     .mypage__edit
       = link_to '編集する',"/users/#{current_user.id}/edit"
   .mypage__main
