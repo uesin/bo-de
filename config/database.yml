@@ -52,3 +52,7 @@ production:
   database: bo-de_production
   username: bo-de
   password: <%= ENV['BO-DE_DATABASE_PASSWORD'] %>
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  adapter: postgresql -
