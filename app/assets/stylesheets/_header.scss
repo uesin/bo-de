@@ -1,4 +1,5 @@
 .mainbox{ 
+  color: #fff;
   height:150px;
   width: 100%;
   background-color: seagreen;
@@ -7,10 +8,15 @@
     justify-content: space-around;
     padding-top: 50px;
     &__left{
+      font-size: 40px;
+      
+      &__name{
+        color:brown;
+      }
+
     }
     &__center{
       text-align: center;
-      background-color: springgreen;
       &__serch{
         &__form{
           height: 38px;
@@ -28,9 +34,12 @@
      &__nav{
       display: flex;
       list-style: none;
+      &__post{
+
+      }
       li{
         padding-left: 10px;
-      }
+        }
      }
     }
   }

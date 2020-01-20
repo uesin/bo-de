@@ -7,11 +7,12 @@
           = link_to post.title,post_path(post.id)   
         .content__box__right__bottom
           .content__box__right__bottom__user
-            = post.user.nickname
+            = link_to post.user.nickname,"/users/#{post.user.id}"
+
           .content__box__right__bottom__tag
             トランプ    
           .content__box__right__bottom__date
-            = post.created_at
+            = post.created_at.strftime("%Y-%m-%d %H:%M")
         .content__box__right__bottom__user
           - if user_signed_in? && current_user.id == post.user_id
             .content__box__right__bottom__user__edit  
