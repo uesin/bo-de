@@ -5,9 +5,9 @@
     .show__content__in
       .show__content__in__top
         .show__content__in__top__name
-          後藤
+          = @post.user.nickname
         .show__content__in__top__date
-          = @post.created_at
+          = @post.created_at.strftime("%Y-%m-%d %H:%M")
       .show__content__in__title
         = @post.title
       .show__content__in__center
@@ -16,7 +16,7 @@
       .show__content__in__main
         .show__content__in__main__text
           = simple_format @post.content
-    - if current_user
+    - if user_signed_in?
       .show__content__comment
         = form_with(model:[@post, @comment], local: true) do |form|
           .show__content__comment__box

@@ -1,6 +1,29 @@
 // Place all the styles related to the posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-* {box-sizing: border-box;
-  
+* {
+box-sizing: border-box;
+font-family: "Nico Moji";
+
 }
+
+  a:visited {
+
+    color:black;
+    text-decoration:underline;
+     
+    }
+
+    a:link {
+
+      color:black;
+      text-decoration:underline;
+       
+      }
+    a:hover{
+    color: blue;
+
+    }
+
+  
+

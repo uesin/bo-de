@@ -29,6 +29,7 @@
           color: red;
         }
         &__bottom{
+          padding-top: 10px;
           font-size: 15px;
           color: #999;
           display: flex;
@@ -48,10 +49,12 @@
 
           
             &__edit{
+            padding-top:10px ;
             margin-left: 30px;
 
             }
             &__delete{
+            padding-top: 10px;
             margin-left: 30px;
             }
           }
