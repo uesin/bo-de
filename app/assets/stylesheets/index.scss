@@ -4,7 +4,10 @@
   background-color:rgb(246, 246, 244);
   box-sizing: border-box;
   &__header{
-    padding-bottom: 30px;
+    padding: 20px 0 ;
+
+    text-align: center;
+    font-size: 30px;
 
   }
 }
