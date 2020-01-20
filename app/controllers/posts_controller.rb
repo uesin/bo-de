@@ -1,4 +1,6 @@
 class PostsController < ApplicationController
+  before_action :set_post, only: [:edit, :show]
+  before_action :move_to_index, except: [:index, :show, :search]
   def index
     @posts = Post.includes(:user)
   end
@@ -10,13 +12,10 @@ class PostsController < ApplicationController
     redirect_to root_path
   end
   def show
-    @post = Post.find(params[:id])
     @comment = Comment.new
     @comments = @post.comments.includes(:user)
-    
   end
   def edit
-    @post = Post.find(params[:id])
   end
   def update
     post = Post.find(params[:id])
@@ -28,10 +27,22 @@ class PostsController < ApplicationController
     post.destroy
     redirect_to root_path
   end
+  def search
+    @posts = Post.search(params[:keyword])
+  end
+
+  
   
 
   private
   def post_params
     params.require(:post).permit(:title, :content).merge(user_id: current_user.id)
+  end
+  def set_post
+    @post = Post.find(params[:id])
+  end
+
+  def move_to_index
+    redirect_to action: :index unless user_signed_in?
   end
 end
