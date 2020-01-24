@@ -1,0 +1,24 @@
+.top
+  .top__head
+    .top__head__right
+      ボドゲの森
+    -#%ul.top__head__left
+      %li.top__head__left__new
+        = link_to '新規登録', new_user_registration_path
+      %li.top__head__left__login
+        = link_to 'ログイン',new_user_session_path
+    
+  .top__main
+    .top__main__top
+      ボドゲの森とは
+    .top__main__center
+      ボードゲームやカードゲームに関する知識を記録・共有するためのサービスです。<br>
+      \
+      ローカルルールや、ルールブックだけでは理解しにくかった部分、忘れそうな内容を<br>
+      \
+      記録そして他のプレーヤーに共有しましょう。
+      
+
+    .top__main__bottom
+    = link_to "森の中を見に行く",root_path,class:"top__main__bottom__btn"
+    
