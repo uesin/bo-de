@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:edit, :show]
-  before_action :move_to_index, except: [:index, :show, :search]
+  before_action :move_to_index, except: [:index, :show, :search,:top]
   def index
     @posts = Post.includes(:user)
   end
@@ -29,6 +29,9 @@ class PostsController < ApplicationController
   end
   def search
     @posts = Post.search(params[:keyword])
+  end
+
+  def top
   end
 
   
