@@ -3,10 +3,12 @@ class UsersController < ApplicationController
     user = User.find(params[:id])
     @nickname = user.nickname
     @introduce = user.introduce
+    @image = user.image
     @posts = user.posts
   end
   def edit
     @user = User.find(params[:id])
+    @image = @user.image
     @posts = @user.posts
   end
   def update
