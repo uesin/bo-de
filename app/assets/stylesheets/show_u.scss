@@ -38,24 +38,27 @@
       height: 20%;
       margin-top: 20px;
       &__icon{
-       &__box{
-        margin: 0 auto;
-        border-width: 2px;
-        border-style: solid;
-        height: 80px;
-        width: 200px;
-        background-color: crimson;
+        text-align: center;
+        &__box{
+        width: 100px;
+        height: 100px;
+        //サイズ指定
+        border-radius: 100px;
+        //画像を丸くする
+        object-fit: cover;
+        }
+      }
+        
         &__choice{
           margin-top: 20px;
         }
-       }
+       
        
 
-      }
+      
       &__nickname{
       padding-top: 10px;
       text-align: center;
-      font-size: 20px;
       font-weight: bold;
 
       }
