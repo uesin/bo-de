@@ -19,7 +19,7 @@
             = f.email_field :email,placeholder: "メールアドレス",class:"new__content__center__right__email__box"
           .new__content__center__right__password
             = f.password_field :password,placeholder: "パスワード（6文字以上）",class:"new__content__center__right__password__box",autocomplete: "off"
-              - if @user.errors.any?
-                %p.error 6文字で設定して下さい
+            - if @user.errors.any?
+              %p.error 6文字で設定して下さい
           .new__content__center__right__submit
             = f.submit "登録する",class:"new__content__center__right__submit__box"
