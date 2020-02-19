@@ -3,10 +3,12 @@ class UsersController < ApplicationController
     user = User.find(params[:id])
     @nickname = user.nickname
     @introduce = user.introduce
+    @image = user.image
     @posts = user.posts
   end
   def edit
     @user = User.find(params[:id])
+    @image = @user.image
     @posts = @user.posts
   end
   def update
@@ -16,6 +18,6 @@ class UsersController < ApplicationController
   end
   private
   def user_params
-    params.require(:user).permit(:nickname, :introduce)
+    params.require(:user).permit(:nickname, :introduce, :image)
   end
 end

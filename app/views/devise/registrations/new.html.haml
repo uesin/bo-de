@@ -17,9 +17,12 @@
             = f.text_field :nickname,placeholder: "ニックネーム",class:"new__content__center__right__nickname__box"
           .new__content__center__right__email
             = f.email_field :email,placeholder: "メールアドレス",class:"new__content__center__right__email__box"
+          .new__content__center__right__image 
+            = f.file_field :image,placeholder: "プロフィール",class:"new__content__center__right__image__box"
           .new__content__center__right__password
-            = f.password_field :password,placeholder: "パスワード（6文字以上）",class:"new__content__center__right__password__box",autocomplete: "off"
+            = f.password_field :password,placeholder: "パスワード（６文字以上）",class:"new__content__center__right__password__box",autocomplete: "off"
             - if @user.errors.any?
-              %p.error 6文字で設定して下さい
+              %p.error 6文字以上で入力して下さい
+            %p.form__info__text  
           .new__content__center__right__submit
             = f.submit "登録する",class:"new__content__center__right__submit__box"

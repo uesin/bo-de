@@ -1,10 +1,12 @@
 
   .content{
-  width: 70%;
+  width: 1000px;
   height: 600px;
   background-color:#fff;
-  margin: 0 auto;
   overflow: scroll;
+  margin-left:70px;
+  margin-top:20px;
+  
 
     &__box{
       padding: 10px;
@@ -14,9 +16,15 @@
       &__left{
         padding-right: 20px;
         &__icon{
-          height: 55px;
-          width: 55px;
-          border: solid 1px;
+          &__image{
+            width: 100px;
+            height: 100px;
+            //サイズ指定
+            border-radius: 100px;
+            //画像を丸くする
+            object-fit: cover;
+
+          }
         }
       }
       &__right{
@@ -49,11 +57,13 @@
 
           
             &__edit{
+            font-size: 12px;
             padding-top:10px ;
             margin-left: 30px;
 
             }
             &__delete{
+            font-size: 12px;
             padding-top: 10px;
             margin-left: 30px;
             }

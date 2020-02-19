@@ -5,7 +5,8 @@
     .mypage__main
       .mypage__main__top
         .mypage__main__top__icon
-          .mypage__main__top__icon__box
+          = image_tag "#{@image}", class:"mypage__main__top__icon__box"
+          = f.file_field :image,placeholder: "プロフィール画像変更",class:"mypage__main__top__icon__box__edit"
         .mypage__main__top__nickname
           = f.text_field :nickname,placeholder: "ニックネームを入力",class:"mypage__main__top__nickname__box"
       .mypage__main__center

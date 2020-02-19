@@ -2,6 +2,7 @@
   - @posts.each do |post|
     .content__box
       .content__box__left__icon
+        = image_tag "#{post.user.image}",class:"content__box__left__icon__image"
       .content__box__right
         .content__box__right__top
           = link_to post.title,post_path(post.id)   
