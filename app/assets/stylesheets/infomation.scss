@@ -1,0 +1,23 @@
+.main{
+
+  &__infomation{
+    
+    font-size: 40px;
+    margin: 0 auto;
+    padding: 50px;
+    &__box{
+    padding-top: 50px;
+    padding-left: 20px;
+    font-family:"M PLUS 1p";
+    margin-top: 50px;
+    font-size: 20px;
+    background-color: #fff;
+    height:500px;
+    }
+    h1{
+      font-family:"M PLUS 1p";
+      text-align: center;
+    }
+  }
+
+}
