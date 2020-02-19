@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:edit, :show]
-  before_action :move_to_index, except: [:index, :show, :search,:top]
+  before_action :move_to_index, except: [:index, :show, :search,:top,:infomation]
   def index
     @posts = Post.includes(:user)
   end
@@ -32,6 +32,9 @@ class PostsController < ApplicationController
   end
 
   def top
+  end
+  
+  def infomation
   end
 
   

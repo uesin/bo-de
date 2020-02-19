@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     collection do
       get 'search'
       get 'top'
+      get 'infomation'
     end
     resources :comments, only: :create
   end
