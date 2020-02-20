@@ -1,4 +1,6 @@
-
+if Rails.env.production?
+    CarrierWave.configure do |config|
+    config.fog_provider = 'fog/aws' 
 CarrierWave.configure do |config|
   config.storage = :fog
   config.fog_provider = 'fog/aws'
@@ -11,4 +13,5 @@ CarrierWave.configure do |config|
 
   config.fog_directory     =  ENV['S3_BUCKET']
   config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/bodespace'
+  CarrierWave::SanitizedFile.sanitize_regexp = /[^[:word:]\.\-\+]/ 
 end
