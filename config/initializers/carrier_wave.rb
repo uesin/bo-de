@@ -9,7 +9,8 @@ CarrierWave.configure do |config|
   }
 
   config.fog_directory     =  ENV['S3_BUCKET']
-  config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/bodespace'
+  config.fog_attributes = { cache_control: "public, max-age=#{365.days.to_i}" } 
+  # config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/bodespace'
 end
 CarrierWave::SanitizedFile.sanitize_regexp = /[^[:word:]\.\-\+]/ 
 end

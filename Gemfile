@@ -71,4 +71,4 @@ gem 'mini_magick'
 group :production do
   gem 'pg'
 end
-gem 'fog-aws'
+ gem 'fog', '1.42'
