@@ -10,5 +10,6 @@ CarrierWave.configure do |config|
 
   config.fog_directory     =  ENV['S3_BUCKET']
   config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/bodespace'
-  CarrierWave::SanitizedFile.sanitize_regexp = /[^[:word:]\.\-\+]/ 
+end
+CarrierWave::SanitizedFile.sanitize_regexp = /[^[:word:]\.\-\+]/ 
 end
